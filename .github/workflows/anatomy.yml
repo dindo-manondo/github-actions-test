@@ -16,6 +16,5 @@ jobs:
 
       - name: python command 
         run: |
-          import os
-          print(os.ctime())
+          print("Hello World")
           shell: python
