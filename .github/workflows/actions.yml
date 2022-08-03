@@ -17,4 +17,3 @@ jobs:
 
       - name: Log Greeting Time 
         run: echo "${{ steps.greet.output.time }}"
-        
