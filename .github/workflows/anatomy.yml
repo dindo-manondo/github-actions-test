@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: checkout 
         uses: actions/checkout@v1
-        
+
       - name: echo a string
         run: echo "Hello World"
       
@@ -33,7 +33,9 @@ jobs:
         run: npm install -g bats
   
       - name: Run build script
-        run: ./.github/scripts/build.sh
+        run: |
+          chmod +x ./.github/scripts/build.sh
+          ./.github/scripts/build.sh
         shell: bash
 
   run-windows-commands:
