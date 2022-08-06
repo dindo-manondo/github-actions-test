@@ -38,6 +38,18 @@ jobs:
           ./.github/scripts/build.sh
         shell: bash
 
+      - name: create artifact 
+        shell: bash
+        run: |
+          touch output.log
+          
+      - name: Upload output file
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-log-file
+          path: output.log
+
+
   run-windows-commands:
     runs-on: windows-latest
     needs: ["run-shell-commands"]
