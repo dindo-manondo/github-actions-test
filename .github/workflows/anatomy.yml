@@ -18,8 +18,14 @@ jobs:
         run: |
           import platform 
           print(platform.processor())
-        shell: python
-  
+        shell: python 
+
+      - name: Connect to PostgreSQL
+        run: node client.js
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432 
+
   run-windows-commands:
     runs-on: windows-latest
     needs: ["run-shell-commands"]
