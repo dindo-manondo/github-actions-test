@@ -20,7 +20,7 @@ jobs:
           print(platform.processor())
         shell: python 
 
-      - name: Connect to PostgreSQL
+      - name: Using custom environment variables 
         run: node -v
         env:
           POSTGRES_HOST: postgres
